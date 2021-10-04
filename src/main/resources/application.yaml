@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: EmployeeManagement
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 20
+
+server:
+  servlet:
+    context-path: /api/store/employee-management
+  max-http-header-size: 64000
+  max-swallow-size: -1
+  max-http-post-size: -1
+  port: 8081
+
+spring.datasource:
+    url: jdbc:postgresql://localhost:5432/employees_database
+    username: postgres
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 10
+
